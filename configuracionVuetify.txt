@@ -1,0 +1,46 @@
+//Se debe agregar al inicio del proyecto, 
+//ya que reemplaza algunos archivos y 
+//podria dejar inutilizable un projecto existente
+$> vue add vuetify
+
+�  Installing vue-cli-plugin-vuetify...
+
++ vue-cli-plugin-vuetify@0.5.0
+added 1 package from 1 contributor and audited 24025 packages in 33.271s
+found 0 vulnerabilities
+
+✔  Successfully installed plugin: vue-cli-plugin-vuetify
+
+? Choose a preset: Configure (advanced)
+? Use a pre-made template? (will replace App.vue and HelloWorld.vue)
+Yes
+? Use custom theme? Yes
+? Use custom properties (CSS variables)? Yes
+? Select icon font Material Icons
+? Use fonts as a dependency (for Electron or offline)? Yes
+? Use a-la-carte components? Yes
+? Select locale Spanish
+
+�  Invoking generator for vue-cli-plugin-vuetify...
+�  Installing additional dependencies...
+
+added 13 packages from 51 contributors and audited 24065 packages in
+57.529s
+found 0 vulnerabilities
+
+⚓  Running completion hooks...
+
+✔  Successfully invoked generator for plugin: vue-cli-plugin-vuetify
+   The following files have been updated / added:
+
+     src/assets/logo.svg
+     src/plugins/vuetify.js
+     package-lock.json
+     package.json
+     public/index.html
+     src/App.vue
+     src/components/HelloWorld.vue
+     src/main.js
+     src/views/Home.vue
+
+   You should review these changes with git diff and commit them.
