@@ -37,6 +37,7 @@
 <script>
 
 import axios from 'axios'
+import { mapMutations } from 'vuex'
 
 export default {
   data () {
@@ -48,11 +49,13 @@ export default {
     }
   },
   methods: {
+    ...mapMutations(['mostrarLoading', 'ocultarLoading']),
     // Evento Asincrono que obtiene el valor del dolas desde un API
     async getDolar (dia) {
       let arrayFecha = dia.split('-')
       let ddmmyy = arrayFecha[2] + '-' + arrayFecha[1] + '-' + arrayFecha[0]
       try {
+        this.mostrarLoading({ titulo: 'Accediendo a informacion', color: 'secondary' })
         let datos = await axios.get(`https://mindicador.cl/api/dolar/${ddmmyy}`)
         // Valido que contenga datos, en caso de dia sabado, domingo o festivo que no entrega el valor del dolas
         if (datos.data.serie.length > 0) {
@@ -62,6 +65,8 @@ export default {
         }
       } catch (error) {
         console.log(error)
+      } finally {
+        this.ocultarLoading()
       }
     }
   },
